@@ -1,11 +1,11 @@
-REATE OR REPLACE FUNCTION tasks.task_add(author BIGINT,
+CREATE OR REPLACE FUNCTION tasks.task_add(author BIGINT,
                                           title  VARCHAR(200),
                                           body   TEXT)
     RETURNS JSONB
     LANGUAGE plpgsql
-SECURITY DEFINER
-    AS
-    $$
+    SECURITY DEFINER
+AS
+$$
 DECLARE
     _dt      TIMESTAMP WITHOUT TIME ZONE;
     _error   VARCHAR(500);
